@@ -1,3 +1,15 @@
+function reset(){
+		var wins = 0;
+		var losses = 0;
+		var guessesLeft = 9;
+		pressedLetters = [];
+}
+
+//keeping track
+	var wins = 0;
+	var losses = 0;
+	var guessesLeft = 9;
+
 $( document ).ready(function() {
     console.log( "ready!" ); //ready check
 
@@ -9,63 +21,40 @@ var pressedLetters = [];
 var pcChoice = letters[Math.floor(Math.random()* letters.length)];
 	console.log(pcChoice);
 
-//logic for user key press
+//accepts user key presses
 document.onkeypress = function(e){
 	//user key press
 	var pressed;
 	pressed = e.key;
+	//shows user pressed key in console
 	console.log(pressed);
-	pressedLetters.join(pressed + (", "));
+	//joins user presses together
+	pressedLetters.push(pressed);
+	//pressedLetters.join(pressed + (", "));
+	//prints user pressed keys to HTML
 	document.getElementById("pressedLetters").innerHTML = pressedLetters;
-
-	//keeping track
-	var wins = 0;
-	var losses = 0;
-	var guessesLeft = 9;
-
+	
 	if (guessesLeft !== 0 ) {
 		
 		if (pressed === pcChoice){
 			wins++;
-			// console.log(wins);
-			document.getElementById("wins").innerHTML = wins;
+			document.getElementById("wins").innerHTML = wins++;
+			reset();
 		}
 		else{
 			losses++;
 			guessesLeft--;
-			console.log(losses);
-			console.log(guessesLeft);
 			document.getElementById("losses").innerHTML = losses;
 			document.getElementById("guessesLeft").innerHTML = guessesLeft;
-			
 		}
 
 		pcChoice = letters[Math.floor(Math.random()* letters.length)];
 		console.log(pcChoice);
-		pressedLetters.push(pressed);
+		
+	}	
+	
 	}
-	else {
-		reset();
-		}
-};
-
-
-
-	// //comparing letters
-	// var compare = function(pressed, pcChoice){
-	// 	if(pressed===pcChoice){
-	// 		wins++;
-	// 	}
-
-	// 	else if (guesses === 0){
-	// 		reset();
-	// 	}
-
-	// 	else {
-	// 		losses++;
-	// 	}
-	// }
-})
+});
 
 
 
