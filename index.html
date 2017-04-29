@@ -8,14 +8,15 @@
 <!-- Bootstrap File -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<!-- JQuery -->
-  <script src="\assets\javascript\game.js"></script>
-
 </head>
+
+<style>
+	body {background-image: url("http://www.technocrazed.com/wp-content/uploads/2015/11/HD-Galaxy-Wallpapers-Free-Download-111.jpg");}
+</style>
 
 <body>
 	
-	<div class="container">
+	<div class="container" style="margin-top: 150px; opacity: .85">
 	  <div class="jumbotron">
 	  	<h1 class="text-center"><strong>The Psychic Game!</strong></h1>
 	  	<h4 class="text-center">Guess what letter I'm thinking of!</h4>
@@ -30,7 +31,7 @@
 
 		<div class="panel-body">
 		  <div class="text-center">
-		  <h4>User input</h4>
+		  	<h4 class="js-used-letters"></h4>
 		  </div>
 		</div>
 
@@ -44,9 +45,9 @@
 
 		<div class="panel-body">
 			<div class="text-center">
-              <button class="btn btn-default btn-lg normal-button"><span class="glyphicon glyphicon-hourglass"></span> Guesses left: </button>
-              <button class="btn btn-success btn-lg grow-button"><span class="glyphicon glyphicon-plus-sign"></span> Wins: </button>
-              <button class="btn btn-danger btn-lg shrink-button"><span class="glyphicon glyphicon-minus-sign"></span> Losses: </button>
+              <button class="btn btn-default btn-lg normal-button"><span class="glyphicon glyphicon-hourglass"></span> Guesses left: <span class= "js-guesses-left">10</span></button>
+              <button class="btn btn-success btn-lg grow-button"><span class="glyphicon glyphicon-plus-sign"></span> Wins: <span class="js-win-counter">0</span></button>
+              <button class="btn btn-danger btn-lg shrink-button"><span class="glyphicon glyphicon-minus-sign"></span> Losses: <span class="js-losses-counter">0</span></button>
             </div>
 		</div>
 	  </div>
@@ -57,3 +58,6 @@
 </body>
 </html>
 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="game.js"></script>
