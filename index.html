@@ -3,12 +3,57 @@
 
 <head>
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-  <title>About | Anna Faizi</title>
+  <title>Psychic Game</title>
+
+<!-- Bootstrap File -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- JQuery -->
+  <script src="\assets\javascript\game.js"></script>
+
 </head>
 
 <body>
-<h1> Demo Repo</h1>
-<p> hello there!</p>
+	
+	<div class="container">
+	  <div class="jumbotron">
+	  	<h1 class="text-center"><strong>The Psychic Game!</strong></h1>
+	  	<h4 class="text-center">Guess what letter I'm thinking of!</h4>
+	  	<h5 class="text-center"><i>Type it on your keyboard</i></h5>
+	  </div>
+
+	  <div class="panel panel-default">
+
+		<div class="panel-heading">
+			<h3 class="panel-title"><strong>Your Guesses so far:</strong></h3>
+		</div>
+
+		<div class="panel-body">
+		  <div class="text-center">
+		  <h4>User input</h4>
+		  </div>
+		</div>
+
+	  </div>
+
+	  <div class="panel panel-default">
+
+		<div class="panel-heading">
+			<h3 class="panel-title"><strong>Let's keep track!</strong></h3>
+		</div>
+
+		<div class="panel-body">
+			<div class="text-center">
+              <button class="btn btn-default btn-lg normal-button"><span class="glyphicon glyphicon-hourglass"></span> Guesses left: </button>
+              <button class="btn btn-success btn-lg grow-button"><span class="glyphicon glyphicon-plus-sign"></span> Wins: </button>
+              <button class="btn btn-danger btn-lg shrink-button"><span class="glyphicon glyphicon-minus-sign"></span> Losses: </button>
+            </div>
+		</div>
+	  </div>
+	</div>
+
+
+
 </body>
 </html>
 
