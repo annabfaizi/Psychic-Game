@@ -3,6 +3,10 @@ function reset(){
 		var losses = 0;
 		var guessesLeft = 9;
 		pressedLetters = [];
+		document.getElementById("pressedLetters").innerHTML = pressedLetters;
+		document.getElementById("wins").innerHTML = wins;
+		document.getElementById("losses").innerHTML = losses;
+		document.getElementById("guessesLeft").innerHTML = guessesLeft;
 }
 
 //keeping track
@@ -51,9 +55,10 @@ document.onkeypress = function(e){
 		pcChoice = letters[Math.floor(Math.random()* letters.length)];
 		console.log(pcChoice);
 		
-	}	
-	
 	}
+	reset();
+}
+
 });
 
 
